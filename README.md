@@ -39,11 +39,11 @@ docker-compose up --build -d
 测试服务器
 
 ```shell
-http://140.210.222.17:8000/docs
+
 ```
 
 真实服务器
 
 ```shell
-http://139.9.158.100:8000/docs
+
 ```

@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+redis
+gunicorn
+akshare
+numpy
+pydantic
+pandas
+requests

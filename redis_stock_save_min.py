@@ -10,6 +10,7 @@ stock_code = stock_zh_a_spot_em_df['代码'].tolist()[:10]
 
 # 采用连接池
 pool = ConnectionPool(host="web-redis", port=6379, db=0, password='king')
+# pool = ConnectionPool(host="139.9.158.100", port=6379, db=0, password='king')
 rdb_conn = Redis(connection_pool=pool, decode_responses=True, encoding="utf-8")
 for item in stock_code:
     rdb_conn.sadd("stock_array", item)

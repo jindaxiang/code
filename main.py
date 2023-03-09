@@ -94,18 +94,6 @@ def code_id_map_em() -> dict:
     return code_id_dict
 
 
-class RealtimeModel(BaseModel):
-    code: str
-    name: str
-    price: float
-    open: float
-    high: float
-    low: float
-    volume: float
-    chg_value: int
-    chg_pct: float
-
-
 class BidAskModel(BaseModel):
     buy_5: float
     buy_4: float
@@ -136,7 +124,6 @@ def get_rdb() -> Redis:
     :rtype: dict
     """
     pool = ConnectionPool(host="web-redis", port=6379, db=0, password="king")
-    # pool = ConnectionPool(host="139.9.158.100", port=6379, db=0, password="king")
     rdb = Redis(connection_pool=pool, decode_responses=True, encoding="utf-8")
     try:
         yield rdb
